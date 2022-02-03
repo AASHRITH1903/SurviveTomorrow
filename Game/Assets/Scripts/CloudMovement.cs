@@ -38,11 +38,12 @@ public class CloudMovement : MonoBehaviour
         }else if(t == 5){
             rb.velocity = new Vector3(0, 0, -1);
         }
-        if(Math.Abs(cube.transform.position.x-transform.position.x) < 6.5f && Math.Abs(cube.transform.position.z-transform.position.z)<6.5f){
+        if(Math.Abs(cube.transform.position.x-transform.position.x) < 5.5f && Math.Abs(cube.transform.position.z-transform.position.z)<5.5f){
             if(!collision){
                 audioData.Play(0);
             }
             collision=true;
+            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.001f);
         }
         else{
             collision=false;

@@ -22,7 +22,7 @@ public class RainDetectionScript : MonoBehaviour
     }
 
     void OnParticleCollision(GameObject other){
-        HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.01f);
+        //HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.01f);
         if(!collision){
             // audioData.Play(0);
         }
